@@ -45,3 +45,5 @@ python manage.py runserver
 Application should be available at [`localhost:8000`](http://localhost:8000)
 
 ## Available Endpoints
+
+- CRUD operations for events [`localhost:8000/api/v1/events/`](http://localhost:8000/api/v1/events/)
