@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from ..models import Event
 
 class EventSerializer(serializers.ModelSerializer):
@@ -6,4 +7,4 @@ class EventSerializer(serializers.ModelSerializer):
     # method = serializers.PrimaryKeyRelatedField(read_only=True)
     class Meta:
         model = Event
-        fields = ('id', 'title', 'type', 'promoter', 'tags', 'created_at', )
+        fields = ('id', 'title', 'type', 'promoter', 'tags', 'venues', 'created_at', )

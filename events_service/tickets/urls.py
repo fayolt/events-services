@@ -11,6 +11,8 @@ from . import views
 
 router = DefaultRouter()
 router.register(r'events', views.EventViewSet)
+router.register(r'venues', views.VenueViewSet)
+router.register(r'dates', views.DateViewSet)
 
 
 urlpatterns = [

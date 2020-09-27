@@ -46,4 +46,6 @@ Application should be available at [`localhost:8000`](http://localhost:8000)
 
 ## Available Endpoints
 
-- CRUD operations for events [`localhost:8000/api/v1/events/`](http://localhost:8000/api/v1/events/)
+- Events [`localhost:8000/api/v1/events/`](http://localhost:8000/api/v1/events/)
+- Venues [`localhost:8000/api/v1/venues/`](http://localhost:8000/api/v1/venues/)
+- Dates [`localhost:8000/api/v1/dates/`](http://localhost:8000/api/v1/dates/)
