@@ -8,5 +8,5 @@ class Venue(Timestamp):
     """
     name = models.CharField(max_length=50)
     address = models.CharField(max_length=255)
-    capacity = models.PositiveIntegerField(default=0)
+    capacity = models.PositiveIntegerField()
     events = models.ManyToManyField(Event, related_name="venues", through='Date')

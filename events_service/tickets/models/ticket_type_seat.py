@@ -12,5 +12,5 @@ class TicketTypeSeat(Timestamp):
         choices = [(status, status.value) for status in TicketTypeSeatStatus],
         default = TicketTypeSeatStatus.AVAILABLE,
     )
-    seat = models.OneToOneField(Seat, on_delete=models.CASCADE)
+    seat = models.OneToOneField(Seat, on_delete=models.CASCADE, primary_key=True)
     ticket_type = models.ForeignKey(TicketType, related_name="ticket_type_seats", on_delete=models.CASCADE)

@@ -7,6 +7,6 @@ class TicketType(Timestamp):
     docstring
     """
     name = models.CharField(max_length=20)
-    capacity = models.PositiveIntegerField()
+    quantity = models.PositiveIntegerField()
     price = models.DecimalField(max_digits=11, decimal_places=2)
     date = models.ForeignKey(Date, related_name="ticket_types", on_delete=models.CASCADE)
