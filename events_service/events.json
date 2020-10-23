@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Kassav' 40ans",
+        "type": "Concert",
+        "promoter": "Alovi Corp.",
+        "tags": [
+            "music",
+            "zouk",
+            "gwada"
+        ]
+    },
+    {
+        "title": "Concert King Mensah",
+        "type": "Concert",
+        "promoter": "All That Prod",
+        "tags": [
+            "music",
+            "tradi",
+            "world"
+        ]
+    }
+]
