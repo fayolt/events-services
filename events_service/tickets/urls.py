@@ -1,20 +1,23 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from django.conf import settings
+# from rest_framework_nested import routers
 from . import views
 
 
-# class CustomRouter(DefaultRouter):
-#     def __init__(self, *args, **kwargs): 
-#         super(DefaultRouter, self).__init__(*args, **kwargs) 
-#         self.trailing_slash = '/?'
+router = DefaultRouter(trailing_slash=False)
 
-router = DefaultRouter()
-router.register(r'events', views.EventViewSet)
 router.register(r'venues', views.VenueViewSet)
+router.register(r'events', views.EventViewSet)
 router.register(r'dates', views.DateViewSet)
+router.register(r'venues/(?P<venue_id>\d+)/seats', views.SeatViewSet, basename='venue-seats')
+# venues_router = routers.NestedDefaultRouter(router, r'venues', lookup='venue')
+# venues_router.register(r'seats', views.SeatViewSet, basename='venue-seats')
+
+
+
+
 
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', include(router.urls))
 ]
