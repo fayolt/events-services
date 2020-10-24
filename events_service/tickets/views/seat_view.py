@@ -7,7 +7,6 @@ from ..util import ListCreateMixin
 
 class SeatViewSet(ListCreateMixin, viewsets.ModelViewSet):
     def get_queryset(self):
-        print(self.request.data)
         return Seat.objects.filter(venue=self.kwargs['venue_id'])
     
     # def create(self, request, *args, **kwargs):

@@ -21,3 +21,6 @@ class Seat(Timestamp):
     )
     section = models.CharField(max_length=20)
     venue = models.ForeignKey(Venue, related_name="venue_seats", on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ('number', 'row', 'section')
