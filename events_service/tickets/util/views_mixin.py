@@ -1,5 +1,6 @@
 class ListCreateMixin:
     """Allows bulk creation of a resource."""
+
     def get_serializer(self, *args, **kwargs):
         if isinstance(kwargs.get('data', {}), list):
             kwargs['many'] = True

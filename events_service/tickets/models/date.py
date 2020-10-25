@@ -2,13 +2,14 @@ from django.db import models
 
 from . import Event, Venue
 
+
 class Date(models.Model):
-    """
-    docstring
-    """
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     venue = models.ForeignKey(Venue, on_delete=models.CASCADE)
     date = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.date}"
+        return (
+            f"{self.event.__str__()} @ {self.venue.__str__()} "
+            f"on { self.date.strftime('%Y-%m-%d %H:%M:%S %Z')}"
+        )

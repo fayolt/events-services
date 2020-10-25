@@ -1,8 +1,8 @@
 from rest_framework import viewsets
 
-# filters, permissions
 from ..models import Venue
 from ..serializers import VenueSerializer
+
 
 class VenueViewSet(viewsets.ModelViewSet):
     queryset = Venue.objects.all()

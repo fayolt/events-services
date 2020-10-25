@@ -2,9 +2,10 @@ from rest_framework import serializers
 
 from ..models import Event
 
+
 class EventSerializer(serializers.ModelSerializer):
-    # id = serializers.IntegerField(required=False)
-    # method = serializers.PrimaryKeyRelatedField(read_only=True)
     class Meta:
         model = Event
-        fields = ('id', 'title', 'type', 'promoter', 'tags', 'venues', 'created_at', )
+        fields = ('id', 'title', 'type', 'promoter',
+                  'tags', 'venues', 'last_modified', 'created_at')
+        read_only_fields = ('id', 'last_modified', 'created_at')

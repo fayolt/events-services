@@ -1,11 +1,10 @@
 from rest_framework import viewsets
 from django_filters import rest_framework
 
-# filters, permissions
 from ..models import Date
 from ..serializers import DateSerializer
-
 from ..filters import DateFilter
+
 
 class DateViewSet(viewsets.ModelViewSet):
     queryset = Date.objects.all()

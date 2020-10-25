@@ -2,6 +2,7 @@ from django.db import models
 
 from . import TicketTypeSeat, Timestamp
 
+
 class Booking(Timestamp):
     # Booking status change
     # pending -> confirmed -> cancelled
@@ -18,8 +19,8 @@ class Booking(Timestamp):
         (CANCELLED, 'Cancelled'),
     )
     status = models.CharField(
-        max_length = 20,
-        choices = STATUS,
-        default = PENDING,
+        max_length=20,
+        choices=STATUS,
+        default=PENDING,
     )
     seat = models.OneToOneField(TicketTypeSeat, on_delete=models.CASCADE)
