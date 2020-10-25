@@ -9,4 +9,3 @@ class DateSerializer(serializers.ModelSerializer):
         model = Date
         fields = ('id', 'event', 'venue', 'date',
                   'last_modified', 'created_at')
-        read_only_fields = ('id', 'last_modified', 'created_at')

@@ -4,5 +4,5 @@ from .venue import Venue
 from .seat import Seat
 from .date import Date
 from .ticket_type import TicketType
-from .ticket_type_seat import TicketTypeSeat
+from .ticket import Ticket
 from .booking import Booking

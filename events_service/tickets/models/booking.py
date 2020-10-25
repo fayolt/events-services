@@ -1,6 +1,6 @@
 from django.db import models
 
-from . import TicketTypeSeat, Timestamp
+from . import Ticket, Timestamp
 
 
 class Booking(Timestamp):
@@ -23,4 +23,4 @@ class Booking(Timestamp):
         choices=STATUS,
         default=PENDING,
     )
-    seat = models.OneToOneField(TicketTypeSeat, on_delete=models.CASCADE)
+    ticket = models.OneToOneField(Ticket, on_delete=models.CASCADE)

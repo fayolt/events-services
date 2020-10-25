@@ -18,7 +18,6 @@ class TicketType(Timestamp):
 
     def save(self, *args, **kwargs):
         if not self.id:
-            self.name = self.name.lower()
             self.slug = slugify(self.name)
 
         super(TicketType, self).save(*args, **kwargs)

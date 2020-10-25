@@ -48,4 +48,7 @@ Application should be available at [`localhost:8000`](http://localhost:8000)
 
 - Events [`localhost:8000/api/v1/events/`](http://localhost:8000/api/v1/events/)
 - Venues [`localhost:8000/api/v1/venues/`](http://localhost:8000/api/v1/venues/)
+- Seats [`localhost:8000/api/v1/venues/:id/seats`](http://localhost:8000/api/v1/venues/:id/seats)
 - Dates [`localhost:8000/api/v1/dates/`](http://localhost:8000/api/v1/dates/)
+- Ticket Types [`localhost:8000/api/v1/dates/:id/ticket-types`](http://localhost:8000/api/v1/dates/:id/ticket-types)
+- Ticket Type Seats [`localhost:8000/api/v1/dates/:id/ticket-types/:slug/tickets`](http://localhost:8000/api/v1/dates/:id/ticket-types/:slug/seats)

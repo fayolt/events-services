@@ -10,5 +10,4 @@ class SeatSerializer(serializers.ModelSerializer):
         model = Seat
         fields = ('id', 'number', 'row', 'gate', 'state', 'section',
                   'venue', 'last_modified', 'created_at', )
-        read_only_fields = ('id', 'last_modified', 'created_at')
         list_serializer_class = CustomListSerializer

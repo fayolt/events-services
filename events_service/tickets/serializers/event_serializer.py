@@ -8,4 +8,3 @@ class EventSerializer(serializers.ModelSerializer):
         model = Event
         fields = ('id', 'title', 'type', 'promoter',
                   'tags', 'venues', 'last_modified', 'created_at')
-        read_only_fields = ('id', 'last_modified', 'created_at')

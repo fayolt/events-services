@@ -14,8 +14,8 @@ router.register(r'venues/(?P<venue_id>\d+)/seats',
 router.register(r'dates/(?P<date_id>\d+)/ticket-types',
                 views.TicketTypeViewSet, basename='date-tickettype')
 router.register(
-    r'dates/(?P<date_id>\d+)/ticket-types/(?P<slug>[-\w]+)/seats',
-    views.TicketTypeSeatViewSet, basename='tickettype-seat')
+    r'dates/(?P<date_id>\d+)/ticket-types/(?P<slug>[-\w]+)/tickets',
+    views.TicketViewSet, basename='tickettype-ticket')
 
 
 urlpatterns = [
