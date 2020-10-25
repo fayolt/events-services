@@ -1,5 +1,4 @@
 from django.db import models
-from django.template.defaultfilters import slugify
 
 from . import Date, Timestamp
 
@@ -15,12 +14,6 @@ class TicketType(Timestamp):
     price = models.DecimalField(max_digits=11, decimal_places=2)
     date = models.ForeignKey(
         Date, related_name="ticket_types", on_delete=models.CASCADE)
-
-    def save(self, *args, **kwargs):
-        if not self.id:
-            self.slug = slugify(self.name)
-
-        super(TicketType, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.name.title()} {self.price}"

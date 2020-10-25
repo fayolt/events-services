@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 
 from . import Seat, TicketType, Timestamp
@@ -23,9 +24,6 @@ class Ticket(Timestamp):
     seat = models.ForeignKey(Seat, on_delete=models.CASCADE)
     tickettype = models.ForeignKey(
         TicketType, related_name="tickettype_seats", on_delete=models.CASCADE)
-
-    class Meta:
-        unique_together = ('seat', 'tickettype')
 
     def __str__(self):
         return f"{self.seat} in {self.tickettype} {self.status}"
